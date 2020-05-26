@@ -13,7 +13,7 @@ function Home() {
   return (
     <S.Container>
       <S.Input value={user} className="usuarioInput" placeholder="Usuário" onChange={e => setUser(e.target.value)} />
-      <S.Button onClick={e => findRepositories('user')}>Procurar</S.Button>
+      <S.Button onClick={e => findRepositories('user')}>Buscar</S.Button>
     </S.Container>
   );
 }

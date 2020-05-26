@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-itens: center;
 `;
 export const Input = styled.input`
     border: 1px solid #ddd;
     height: 2rem;
     padding: 0 0.5rem;
     border-radius: .25rem 0 0 .25rem;
-
     &:focus,
     &:active{
         outline: none;
@@ -19,15 +19,17 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-    height: 1.5rem;
-    border: 1px solid #000;
+    border: 1px solid #ddd;
     background: #000;
     color: #fff;
     border-radius: 0 0.25rem 0.25rem 0;
-
-    &:focus,
+    outline: none;
+    box-shadow: none;
+    font-weight: bold;
     &:active{
-        outline: none;
-        box-shadow: none;
+        background: rgba(0,0,0,0.9);
+    }
+    &:hover{
+        cursor: pointer;
     }
 `;
