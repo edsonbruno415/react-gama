@@ -1,15 +1,20 @@
 import React from 'react';
 import * as S from './styled';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function Repositories() {
     const [ repositories, setRepositories ] = useState([]);
-    useEffect(()=>{
+    const history = useHistory();
+    useEffect(function(){
         const repos = localStorage.getItem('repositorios');
-        setRepositories(JSON.parse(repos));
-        localStorage.clear();
-    }, []);
+        if(repos !== null){
+            setRepositories(JSON.parse(repos));
+            localStorage.clear();
+        }else{
+            history.push('/');
+        }
+    },[]);
 
     return (
         <S.Container>

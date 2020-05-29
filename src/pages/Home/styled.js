@@ -34,3 +34,10 @@ export const Button = styled.button`
         cursor: pointer;
     }
 `;
+
+export const ErrorMessage = styled.span`
+    color: red;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+`;
