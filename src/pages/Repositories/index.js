@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from './styled';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Repositories() {
     const [ repositories, setRepositories ] = useState([]);
@@ -22,6 +23,7 @@ function Repositories() {
                 );
             }) }
         </S.List>
+        <S.LinkHome to="/">Voltar</S.LinkHome>
         </S.Container>
     );
 }
